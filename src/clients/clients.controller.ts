@@ -16,7 +16,7 @@ import { UpdateClientDto } from './dto/update-client.dto';
 export class ClientsController {
   constructor(private readonly clientsService: ClientsService) {}
 
-  @Post()
+  @Post('/create')
   async create(@Body() createClientDto: CreateClientDto) {
     return await this.clientsService.create(createClientDto);
   }
